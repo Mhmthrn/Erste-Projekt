@@ -16,7 +16,7 @@ public class Depo {
                 "\t 1- Okul Bilgilerini Goruntule\n" +
                 "\t 2- Ogretmen Menu\n" +
                 "\t 3- Ogrenci Menu\n" +
-                "\t Q- Cikis");
+                "\t Q- Cikis\n");
         System.out.println("Lutfen Menuden tercihinizi yapiniz");
         tercih=scan.nextLine();
 

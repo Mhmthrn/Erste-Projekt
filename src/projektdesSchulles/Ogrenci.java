@@ -8,7 +8,7 @@ public class Ogrenci {
 
     public static void feykOgrenciEkle() {
 
-        ogrenciMap.put("14785442369","Ali,  Can,   2008, 3569, 12, A");
+        ogrenciMap.put("14785442369","Ali, Can,   2008, 3569, 12, A");
         ogrenciMap.put("74577826988","Veli, Kalem, 2009, 3559, 12, B");
         ogrenciMap.put("74881258963","Ayse, Terzi, 2008, 3565, 12, A");
         ogrenciMap.put("36688989874","Omer,  Nar,  2008, 1569, 11, A");
@@ -65,7 +65,7 @@ public class Ogrenci {
     }
 
     private static void tcNoIleOgrenciSilme() {
-       /* System.out.println("Silinecek ogrenci kimlik no giriniz");
+       System.out.println("Silinecek ogrenci kimlik no giriniz");
         String silinecekOgreci=scan.nextLine();
         String silinecekValue=ogrenciMap.get(silinecekOgreci);
 
@@ -75,11 +75,11 @@ public class Ogrenci {
             boolean sonuc=  sonucValue.equals(silinecekValue);
         } catch (Exception e) {
             System.out.println("Verilen kimlik no ile ogrenci bulunamadi");
-        }*/
+        }
     }
 
     private static void ogrenciEkle() {
-      /*  System.out.println("Tc No");
+        System.out.println("Tc No");
         String tcNo=scan.nextLine();
         System.out.println("Isim");
         String isim=scan.nextLine();
@@ -98,12 +98,12 @@ public class Ogrenci {
         String value= isim+", "+ soyIsim+"," + dYili+", "+ okulNo+","
                 + sinif+","+sube ;
 
-        ogrenciMap.put(tcNo,value);*/
+        ogrenciMap.put(tcNo,value);
     }
 
     private static void sinifVeSubeIleOgrenciBulma() throws InterruptedException {
 
-   /* Set<Map.Entry<String, String>> myEntrySet = ogrenciMap.entrySet();
+        Set<Map.Entry<String, String>> myEntrySet = ogrenciMap.entrySet();
         System.out.println(ogrenciMap);
         System.out.println("Istediginiz ogrenci Sinifini  yaziniz");
         String istenilenSinif = scan.nextLine();
@@ -128,12 +128,12 @@ public class Ogrenci {
                     eachValueArr[4], eachValueArr[5]);
         }
         Thread.sleep(5000);
-    }*/
+    }
 
 }
 
     private static void soyisimdenOgrenciBulma() throws InterruptedException {
-      /*  Set<Map.Entry<String,String>> myEntrySet=ogrenciMap.entrySet();
+        Set<Map.Entry<String,String>> myEntrySet=ogrenciMap.entrySet();
         System.out.println(ogrenciMap);
         System.out.println("Istediginiz ogrenci soyismini yaziniz");
         String istenilenSoyisim=scan.nextLine();
@@ -151,16 +151,16 @@ public class Ogrenci {
             String[] eachValueArr =eachValue.split(", ");
 
            if (istenilenSoyisim.equalsIgnoreCase(eachValueArr[1])){
-               System.out.printf("%-12s %-6s %-9s %-7s %-8s %-5s %-2s \n",eachKey, eachValueArr[0],eachValueArr[1],eachValueArr[2], eachValueArr[3],
+               System.out.printf("%-12s %-7s %-9s %-7s %-8s %-5s %-2s \n",eachKey, eachValueArr[0],eachValueArr[1],eachValueArr[2], eachValueArr[3],
                                                                           eachValueArr[4], eachValueArr[5]);
         }
         Thread.sleep(5000);
 
 
-    }*/
+    }
     }
 
-    public static void ogrenciListeYazdir() throws InterruptedException {
+    private static void ogrenciListeYazdir() throws InterruptedException {
 
         Set<Map.Entry<String,String>> ogrenciEntrySet= ogrenciMap.entrySet();
 
@@ -168,13 +168,13 @@ public class Ogrenci {
                 "============= OGRENCI LISTESI ==============\n" +
                 "Tc No      Isim    Soyisim   D Yili  Okul No   Sinif  Sube");
 
-        for (Map.Entry<String,String> each: ogrenciEntrySet
+        for (Map.Entry<String, String> each: ogrenciEntrySet
              ) {
 
-            String eachKey=each.getKey();
-            String eachValue=each.getValue();
+            String eachKey = each.getKey();
+            String eachValue = each.getValue();
 
-            String[] eachValueArr =eachValue.split(", ");
+            String[] eachValueArr = eachValue.split(",");
             System.out.printf("%-12s %-6s %-9s %-7s %-8s %-5s %-2s\n",eachKey,eachValueArr[0],eachValueArr[1],
                                               eachValueArr[2],eachValueArr[3], eachValueArr[4], eachValueArr[5]);
 

@@ -6,5 +6,6 @@ public class Okul {
     static final String telefon= "03122366554";
 
    private Okul (){}
+    // degisiklik var main
 
 }
